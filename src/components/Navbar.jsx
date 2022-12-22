@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import Logo from "../assets/photo-file-logo-2.jpg";
+import Logo from "../assets/photo-file-logo-2.JPG";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { FiArrowLeftCircle, FiArrowRightCircle} from "react-icons/fi";
