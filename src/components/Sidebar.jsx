@@ -87,7 +87,7 @@ const Sidebar = () => {
       </ul>
       {/* mobile div */}
       <div className="flex bg-white drop-shadow-md w-full relative px-6 items-center  h-20 justify-between lg:hidden">
-        <img src={Logo} className="object-contain h-20 " alt="" />
+        {/* <img src={Logo} className="object-contain h-20 " alt="" /> */}
         <div className=" flex items-center gap-x-4 ">
           <Link to="igfilters">
             <button className="   cursor-pointer border border-gray-300 shadow-md text-indigo-500 rounded text-center px-2  py-2 hover:bg-gray-600 ">
