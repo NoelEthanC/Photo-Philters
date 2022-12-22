@@ -2,18 +2,18 @@ import React, { useState, useContext } from "react";
 import Logo from "../assets/photo-file-logo.jpg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-import { FiArrowLeftCircle, FiArrowRightCircle} from "react-icons/fi";
+import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
-import PhotoContext from '../context/PhotoContext';
+import PhotoContext from "../context/PhotoContext";
 
 const Navbar = () => {
   const [isNavOpen, setisNavOpen] = useState(false);
-  const {setIsFilterSelected} = useContext(PhotoContext)
+  const { setIsFilterSelected } = useContext(PhotoContext);
   const handleNavOpen = (e) => {
     setisNavOpen(!isNavOpen);
   };
@@ -21,15 +21,18 @@ const Navbar = () => {
     <div className="bg-white">
       <div className="w-[1200px] hidden border-b  h-24 justify-around bg-origin-border  p-4 lg:flex mx-auto items-center  ">
         <div className="">
-          <img src={Logo} className="object-contain h-24 rounded-full shadow-xl  " alt="" />
+          <p className="text-4xl font-bold text-gray-700 ">
+            Photo<span className="text-indigo-700">Fil</span>
+          </p>
+          {/* <img src={Logo} className="object-contain h-24 rounded-full shadow-xl  " alt="" /> */}
         </div>
 
         <ul className="flex items-center text-lg  tracking-wide ">
-          <Link to='/' >
-          <li className="p-4 cursor-pointer text-gray-500 ">Home</li>
+          <Link to="/">
+            <li className="p-4 cursor-pointer text-gray-500 ">Home</li>
           </Link>
-          <Link to='photo-edit/igfilters' onClick={setIsFilterSelected(true)}  >
-          <li className="p-4 cursor-pointer text-gray-500 ">Filter</li>
+          <Link to="photo-edit/igfilters" onClick={setIsFilterSelected(true)}>
+            <li className="p-4 cursor-pointer text-gray-500 ">Filter</li>
           </Link>
         </ul>
         <Link to="/photo-edit">
@@ -42,8 +45,12 @@ const Navbar = () => {
       {/*mobile Nav*/}
 
       <div className="flex bg-white drop-shadow-md w-full  px-6 items-center static h-20 justify-between lg:hidden">
-        <img src={Logo} className="object-contain h-20 " alt="" />
-        <Link  to='/photo-edit'>
+        <p className="text-4xl font-bold text-gray-700 ">
+          Photo<span className="text-indigo-700">Fil</span>
+        </p>
+
+        {/* <img src={Logo} className="object-contain h-20 " alt="" /> */}
+        <Link to="/photo-edit">
           <button className=" px-2 py-2 bg-indigo-500 rounded drop-shadow-md text-white hover:animate-pulse hover:scale-200 focus:appearance-none  ">
             Edit Photo
           </button>
