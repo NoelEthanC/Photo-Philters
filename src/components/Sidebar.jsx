@@ -5,7 +5,7 @@ import {
   BsFillArrowUpCircleFill,
   BsUpload,
 } from "react-icons/bs";
-import Logo from "../assets/photo-file-logo-2.jpg";
+// import Logo from "../assets/photo-file-logo-2.jpg";
 import { NavLink, Link, Outlet } from "react-router-dom";
 import { AiOutlineUndo } from "react-icons/ai";
 import PhotoContext from "../context/PhotoContext";
